@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class FleshBoi : MonoBehaviour
+public class FleshBoiHand : MonoBehaviour
 {
-    public ScoreKeeper scoreKeeper;
+    public Syringe HeldSyringe;
 
     void Start()
     {
         
     }
-
-    void Update()
-    {
-        
-    }
-
 
     public void OnSelectEnter(SelectEnterEventArgs ev)
     {
@@ -28,8 +22,9 @@ public class FleshBoi : MonoBehaviour
 
     public void OnSelectExit(SelectExitEventArgs ev)
     {
+        if (ev.interactorObject.transform.gameObject == HeldSyringe)
+        {
 
-        
+        }
     }
-
 }

@@ -14,6 +14,16 @@ public class Syringe : MonoBehaviour
     public Juice JuiceType;
     public Transform NeedleEndPoint;
 
+    public MeshRenderer TargetColorMesh;
+    public List<Material> Materials;
+
+    #if UNITY_EDITOR
+        private void OnValidate()
+        {
+            TargetColorMesh.materials = new Material[] { Materials[(int)JuiceType] };    
+        }
+    #endif
+
     void Start()
     {
         
@@ -26,6 +36,7 @@ public class Syringe : MonoBehaviour
 
     public void Activate()
     {
+
     }
 
     public void EnteredTumor()
