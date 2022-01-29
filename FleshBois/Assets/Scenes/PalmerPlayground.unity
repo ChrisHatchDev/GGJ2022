@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18259025, g: 0.22830224, b: 0.3071796, a: 1}
+  m_IndirectSpecularColor: {r: 0.182591, g: 0.2283035, b: 0.30718133, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -528,6 +528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 780519565}
+  - component: {fileID: 780519566}
   m_Layer: 0
   m_Name: Scorekeeper
   m_TagString: Untagged
@@ -549,6 +550,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780519566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780519564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d92e0a7f1f801849929ef1fd63b5c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalDB: 0
+  MaxTumorSize: 0
+  ConnectionString: 
+  PlayerName: 
 --- !u!1 &820377335
 GameObject:
   m_ObjectHideFlags: 0

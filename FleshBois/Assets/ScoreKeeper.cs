@@ -11,12 +11,20 @@ public class ScoreKeeper : MonoBehaviour
     public float MaxTumorSize;
     public string ConnectionString;
     public string PlayerName;
+    const string TableName = "highscores";
     List<float> ListOfTumorSizes;
     IDbConnection dbcon;
-    string connection = "URI=file:" + Application.persistentDataPath + "/" + "GameData";
+    string connection;
     
     void Start(){
+        connection = "URI=file:" + Application.persistentDataPath + "/" + "GameData";
+        //Debug.Log(connection);
+        dbcon = new SqliteConnection(connection);
         createHighscoresTable();
+        // PlayerName = "test";
+        // saveScore(69);
+        // saveScore(420);
+        // logDBValues();
 
     }
 
@@ -24,7 +32,7 @@ public class ScoreKeeper : MonoBehaviour
         dbcon.Open();
 		IDbCommand dbcmd;
 		dbcmd = dbcon.CreateCommand();
-		dbcmd.CommandText = "CREATE TABLE IF NOT EXISTS highscores (id INTEGER PRIMARY KEY, playername TEXT , score INTEGER )";
+		dbcmd.CommandText = string.Format("CREATE TABLE IF NOT EXISTS {0} (id INTEGER PRIMARY KEY, playername TEXT , score INTEGER )", TableName) ;
 		dbcmd.ExecuteReader();
         dbcon.Close();
     }
@@ -32,7 +40,8 @@ public class ScoreKeeper : MonoBehaviour
     void saveScore(int score){
         dbcon.Open();
 		IDbCommand cmnd = dbcon.CreateCommand();
-		cmnd.CommandText = string.Format("INSERT INTO my_table (playername, score) VALUES ({0}, {1})", PlayerName, score);
+        //Debug.Log(string.Format("INSERT INTO {0} (playername, score) VALUES ('{1}', {2})", TableName, PlayerName, score));
+		cmnd.CommandText = string.Format("INSERT INTO {0} (playername, score) VALUES ('{1}', {2})", TableName, PlayerName, score);
 		cmnd.ExecuteNonQuery();
         dbcon.Close();
     }
@@ -41,12 +50,13 @@ public class ScoreKeeper : MonoBehaviour
         dbcon.Open();
 		IDbCommand cmnd_read = dbcon.CreateCommand();
 		IDataReader reader;
-		string query ="SELECT * FROM my_table";
+		string query =string.Format("SELECT * FROM {0}", TableName);
 		cmnd_read.CommandText = query;
 		reader = cmnd_read.ExecuteReader();
 
 		while (reader.Read())
 		{
+            Debug.Log(reader.ToString());
 			Debug.Log("id: " + reader[0].ToString());
 			Debug.Log("val: " + reader[1].ToString());
 		}
