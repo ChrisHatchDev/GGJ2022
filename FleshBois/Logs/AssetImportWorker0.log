@@ -742,3 +742,77 @@ Received Import Request.
 Start importing Assets/Scenes using Guid(3bdb96a718cd74acab695ff49c9a25b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d4d4f678e2208242017af4bef4b06d') in 0.001643 seconds 
   Import took 0.007361 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 9736.286315 seconds.
+  path: Assets/Art_Assets/Meshes/SM_Syringe.fbx
+  artifactKey: Guid(8371cd1912ec853408e45fb8c92be8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art_Assets/Meshes/SM_Syringe.fbx using Guid(8371cd1912ec853408e45fb8c92be8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce7301722521324a6e3af1bd1d65eeca') in 0.042432 seconds 
+  Import took 0.046440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.386465 seconds.
+  path: Assets/Art_Assets/Meshes/SM_OperationTable.fbx
+  artifactKey: Guid(6606640cd1d44d1409f1049b4d94831d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art_Assets/Meshes/SM_OperationTable.fbx using Guid(6606640cd1d44d1409f1049b4d94831d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '294f1d8af0e0e262b4cc84ab56e1e231') in 0.101058 seconds 
+  Import took 0.104549 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009277 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 70.53 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.016 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1016ms)
+		BeginReloadAssembly (101ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (856ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (278ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (354ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (71ms)
+				BeforeProcessingInitializeOnLoad (58ms)
+				ProcessInitializeOnLoadAttributes (205ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Unloading 2812 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.2 MB.
+System memory in use after: 124.4 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 3.656900 ms (FindLiveObjects: 0.281700 ms CreateObjectMapping: 0.095700 ms MarkObjects: 3.230500 ms  DeleteObjects: 0.047600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
