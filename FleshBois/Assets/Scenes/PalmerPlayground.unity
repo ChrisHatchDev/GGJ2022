@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 780519565}
   - component: {fileID: 780519566}
   - component: {fileID: 780519567}
+  - component: {fileID: 780519568}
   m_Layer: 0
   m_Name: Scorekeeper
   m_TagString: Untagged
@@ -567,6 +568,7 @@ MonoBehaviour:
   MaxTumorSize: 0
   ConnectionString: 
   PlayerName: 
+  currentScore: 0
 --- !u!114 &780519567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,6 +584,27 @@ MonoBehaviour:
   timeRemaining: 120
   timerIsRunning: 0
   timeText: 
+  TimerEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &780519568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780519564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a77c93f375bab4ca363106c99a3b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGameState: 0
+  gameTimer: {fileID: 780519567}
+  GameEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  score: {fileID: 0}
 --- !u!1 &820377335
 GameObject:
   m_ObjectHideFlags: 0
