@@ -7,33 +7,38 @@ using System.IO;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    public bool Local;
+    public bool LocalDB;
+    public float MaxTumorSize;
     public string ConnectionString;
-
+    public string PlayerName;
+    List<float> ListOfTumorSizes;
+    IDbConnection dbcon;
+    string connection = "URI=file:" + Application.persistentDataPath + "/" + "GameData";
     
-    // Start is called before the first frame update
     void Start(){
-		// Create database
-		string connection = "URI=file:" + Application.persistentDataPath + "/" + "My_Database";
-		
-		// Open connection
-		IDbConnection dbcon = new SqliteConnection(connection);
-		dbcon.Open();
+        createHighscoresTable();
 
-		// Create table
+    }
+
+    void createHighscoresTable(){
+        dbcon.Open();
 		IDbCommand dbcmd;
 		dbcmd = dbcon.CreateCommand();
-		string q_createTable = "CREATE TABLE IF NOT EXISTS my_table (id INTEGER PRIMARY KEY, val INTEGER )";
-		
-		dbcmd.CommandText = q_createTable;
+		dbcmd.CommandText = "CREATE TABLE IF NOT EXISTS highscores (id INTEGER PRIMARY KEY, playername TEXT , score INTEGER )";
 		dbcmd.ExecuteReader();
+        dbcon.Close();
+    }
 
-		// Insert values in table
+    void saveScore(int score){
+        dbcon.Open();
 		IDbCommand cmnd = dbcon.CreateCommand();
-		cmnd.CommandText = "INSERT INTO my_table (id, val) VALUES (0, 5)";
+		cmnd.CommandText = string.Format("INSERT INTO my_table (playername, score) VALUES ({0}, {1})", PlayerName, score);
 		cmnd.ExecuteNonQuery();
+        dbcon.Close();
+    }
 
-		// Read and print all values in table
+    void logDBValues(){
+        dbcon.Open();
 		IDbCommand cmnd_read = dbcon.CreateCommand();
 		IDataReader reader;
 		string query ="SELECT * FROM my_table";
@@ -45,11 +50,12 @@ public class ScoreKeeper : MonoBehaviour
 			Debug.Log("id: " + reader[0].ToString());
 			Debug.Log("val: " + reader[1].ToString());
 		}
-
-		// Close connection
-		dbcon.Close();
+        dbcon.Close();
     }
 
+    void addTumor(float size){
+        ListOfTumorSizes.Add(size);
+    }
     void startTimer(){
         
     }
