@@ -14,17 +14,17 @@ public class FleshBoiHand : MonoBehaviour
 
     public void OnSelectEnter(SelectEnterEventArgs ev)
     {
-        if (ev.interactorObject.transform.tag == "Syringe")
+        if (ev.interactableObject.transform.tag == "Syringe")
         {
-
+            HeldSyringe = ev.interactableObject.transform.GetComponent<Syringe>();
         }
     }
 
     public void OnSelectExit(SelectExitEventArgs ev)
     {
-        if (ev.interactorObject.transform.gameObject == HeldSyringe)
+        if (ev.interactableObject.transform.gameObject == HeldSyringe)
         {
-
+            HeldSyringe = null;
         }
     }
 }
