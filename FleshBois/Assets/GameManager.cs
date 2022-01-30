@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
     {
         
     }
-    void StartGame(){
+    public void StartGame(){
         currentGameState = GameState.active;
     }
     public void EndGame(){

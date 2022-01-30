@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 95806986ad750f649b1593c889871989
+guid: 5c71b573698384a22bf4256e09345307
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Clipboard
+    second: {fileID: 2100000, guid: 22e479b3c5ad7f64ebdf38fed7c753aa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +39,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 3.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -85,7 +90,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.035
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
