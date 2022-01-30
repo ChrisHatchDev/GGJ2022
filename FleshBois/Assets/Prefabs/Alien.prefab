@@ -1815,8 +1815,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _source: {fileID: 7361843391377487010}
-  pain: {fileID: 0}
-  joy: {fileID: 8300000, guid: 3a3cf442ec9263a48abe2e0de78ac913, type: 3}
+  pain: {fileID: 8300000, guid: 62b600b7616393f4481407d249775e71, type: 3}
+  joy: {fileID: 8300000, guid: 020257708466d1844a83934b3a04011b, type: 3}
 --- !u!95 &1007206733
 Animator:
   serializedVersion: 3
