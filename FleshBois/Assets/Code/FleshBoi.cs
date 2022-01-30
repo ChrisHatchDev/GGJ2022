@@ -8,8 +8,6 @@ public class FleshBoi : MonoBehaviour
 {
     public ScoreKeeper scoreKeeper;
 
-    public Syringe ActiveSyrings;
-    
     public PlayerInput playerInput;
 
     void Awake()
