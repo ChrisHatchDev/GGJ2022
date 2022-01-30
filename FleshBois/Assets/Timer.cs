@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 120;
     public bool timerIsRunning = false;
     public string timeText;
+    public UnityEvent TimerEndEvent;
 
     private void Start()
     {
@@ -26,11 +28,15 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                //Debug.Log("Time has run out!");
+                TimerEndEvent.Invoke();
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
         }
+    }
+
+    void addTime(int seconds){
+        timeRemaining += (float) seconds;
     }
 
     void DisplayTime(float timeToDisplay)
