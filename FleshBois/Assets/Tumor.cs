@@ -28,4 +28,9 @@ public class Tumor : MonoBehaviour
             anim.SetTrigger("healed");
         }
     }
+
+    public void DestroyTumor()
+    {
+        this.gameObject.SetActive(false);
+    }
 }
