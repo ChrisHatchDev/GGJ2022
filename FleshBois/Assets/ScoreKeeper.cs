@@ -14,7 +14,8 @@ public class ScoreKeeper : MonoBehaviour
     public float MaxTumorSize;
     public string ConnectionString;
     public string PlayerName;
-    public int currentScore;
+    int currentScore;
+    bool validScore = true;
 
     List<float> ListOfTumorSizes;
     List<float> ListOfDamage;
@@ -76,17 +77,28 @@ public class ScoreKeeper : MonoBehaviour
     }
 
     void addTumor(float size){
+        validScore = false;
         ListOfTumorSizes.Add(MaxTumorSize/size);
         UpdatedScore.Invoke();
     }
     void addDamage(float damage){
+        validScore = false;
         ListOfDamage.Add(damage);
         UpdatedScore.Invoke();
     }
+
     int getCurrentScore(){
-        return (int)(ListOfTumorSizes.Sum() - ListOfDamage.Sum());
+        if(validScore){
+            return currentScore;
+        }
+        else{
+            return (int)(ListOfTumorSizes.Sum() - ListOfDamage.Sum());
+        }
     }
     public void clearScore(){
-
+        currentScore = 0;
+        validScore = true;
+        ListOfDamage.Clear();
+        ListOfTumorSizes.Clear();
     }
 }
