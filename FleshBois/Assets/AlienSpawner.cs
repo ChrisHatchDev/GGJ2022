@@ -33,4 +33,9 @@ public class AlienSpawner : MonoBehaviour
     {
         anim.SetTrigger("dumpsterOpen");
     }
+
+    public void CloseDisposeAlien()
+    {
+        anim.SetTrigger("dumpsterClose");
+    }
 }

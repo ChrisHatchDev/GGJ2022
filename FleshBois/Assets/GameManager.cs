@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour {
         gameTimer.RestartTimer();
         currentGameState = GameState.idle;
         gameOverScreen.SetTrigger("Close");
+        operatingTable.UnYeet();
+        alienSpawner.CloseDisposeAlien();
         StartGameDelayed();
     }
     private void Awake()
