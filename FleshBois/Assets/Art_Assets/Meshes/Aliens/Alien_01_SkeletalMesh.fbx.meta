@@ -3,7 +3,12 @@ guid: 45292e9e1369ad249aa326003a899bbb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UMesh_Alien_01_low1.001
+    second: {fileID: 2100000, guid: 4cf1688bd8da6254388d0909295d16ba, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
