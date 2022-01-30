@@ -9,7 +9,6 @@ public class TimerUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TimerText.color = Color.red;
     }
 
     // Update is called once per frame
