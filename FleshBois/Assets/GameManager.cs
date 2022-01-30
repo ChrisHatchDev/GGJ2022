@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour {
     public AlienSpawner alienSpawner;
     public OperatingTable operatingTable;
 
+    public float nextSquish = 0.0f;
+
     void Start()
     {
         gameTimer.TimerEndEvent.AddListener(EndGame);

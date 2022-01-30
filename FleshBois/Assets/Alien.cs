@@ -12,6 +12,9 @@ public class Alien : MonoBehaviour
 
     public UnityEvent OnHealed = new UnityEvent();
     public UnityEvent OnDied = new UnityEvent();
+    public AudioSource _source;
+    public AudioClip pain;
+    public AudioClip joy;
 
     #if UNITY_EDITOR
     private void OnValidate()
@@ -65,4 +68,13 @@ public class Alien : MonoBehaviour
             this.OnDied.Invoke();
         }
     }
+
+    public void PainSound(){
+        _source.PlayOneShot(pain, 1.0f);
+    }
+
+    public void JoySound(){
+        _source.PlayOneShot(joy, 1.0f);
+    }
+
 }

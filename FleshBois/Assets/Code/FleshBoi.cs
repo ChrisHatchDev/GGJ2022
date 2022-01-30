@@ -9,6 +9,7 @@ public class FleshBoi : MonoBehaviour
     public ScoreKeeper scoreKeeper;
 
     public PlayerInput playerInput;
+    
 
     void Awake()
     {
@@ -22,12 +23,14 @@ public class FleshBoi : MonoBehaviour
 
         if (tumor != null)
         {
+            alien.JoySound();
             tumor.Heal();
             GameManager.Instance.score.addTumor(tumor.Size);
         }
 
         if (tumor == null && alien != null)
         {
+            alien.PainSound();
             GameManager.Instance.score.addDamage(30.0f);
             alien.DecrementHealth();
         }
