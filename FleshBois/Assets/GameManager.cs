@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     
     public Animator gameOverScreen;
     public AlienSpawner alienSpawner;
+    public OperatingTable operatingTable;
 
     void Start()
     {
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour {
         
     }
     public void StartGame(){
+        if (currentGameState == GameState.active) return;
+
         alienSpawner.LaunchNewAlien();
         gameTimer.StartTimer();
         currentGameState = GameState.active;
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour {
         currentGameState = GameState.ended;
         GameEndEvent.Invoke();
 
+        operatingTable.Yeet();
         alienSpawner.DisposeOfAlien();
         gameTimer.EndTimer();
         gameOverScreen.SetTrigger("Open");
