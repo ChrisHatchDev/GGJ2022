@@ -4235,6 +4235,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1097764940, guid: fece6fa2ccfd7440d8cd1bea3b44c032, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 5e0f90c28a8824d47984bc3a62a163a1, type: 2}
+    - target: {fileID: 1318552318, guid: fece6fa2ccfd7440d8cd1bea3b44c032, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 5e0f90c28a8824d47984bc3a62a163a1, type: 2}
     - target: {fileID: 7264947626273237, guid: fece6fa2ccfd7440d8cd1bea3b44c032, type: 3}
       propertyPath: m_Name
       value: World
