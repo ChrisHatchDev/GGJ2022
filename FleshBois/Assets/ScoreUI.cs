@@ -14,6 +14,10 @@ public class ScoreUI : MonoBehaviour
 
     void Update()
     {
+        //test();
+        ScoreText.text = GameManager.Instance.score.getCurrentScore().ToString();
+    }
+    void test(){
         int doThing = Random.Range(0, 100);
         if(doThing > 97){
             if(doThing == 98)
@@ -21,6 +25,5 @@ public class ScoreUI : MonoBehaviour
             else
                 GameManager.Instance.score.addDamage(Random.Range(0.0f, 10.0f));
         }
-        ScoreText.text = GameManager.Instance.score.getCurrentScore().ToString();
     }
 }
