@@ -6,8 +6,7 @@ public class audiocontact : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip squish;
-    public float nextSound = 0.0f;
-    float fireRate = 1.0f;  
+    float fireRate = 0.5f;  
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +19,8 @@ public class audiocontact : MonoBehaviour
         
     }
     private void OnCollisionEnter(Collision other) {
-        if(Time.time > nextSound){
-            nextSound = Time.time + fireRate;
+        if(Time.time > GameManager.Instance.nextSquish){
+            GameManager.Instance.nextSquish = Time.time + fireRate;
             //Debug.Log("COLLIDED");
             audioSource.PlayOneShot(squish, 1.0f);
         }
