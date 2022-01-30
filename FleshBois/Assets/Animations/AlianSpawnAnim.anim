@@ -615,6 +615,20 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 3a44bda46a059d542a4e6b193b476bb1, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0166667
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 3899cd2fdc6efa841bff88876e09effb, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 2
     functionName: LaunchNewAlien
     data: 
