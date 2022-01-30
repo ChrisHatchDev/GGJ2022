@@ -3,7 +3,22 @@ guid: 8371cd1912ec853408e45fb8c92be8cf
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fluid
+    second: {fileID: 2100000, guid: 05701ae11a7ccdd49ac90dd72d7184f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Syringe
+    second: {fileID: 2100000, guid: cab14e89cb23d9c4ca5175a154327e65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Transparent
+    second: {fileID: 2100000, guid: cb70ca32b7cd5644ba7282a13d4a0984, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
