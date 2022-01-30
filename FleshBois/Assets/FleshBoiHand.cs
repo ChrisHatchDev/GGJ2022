@@ -13,14 +13,21 @@ public enum Hand
 
 public class FleshBoiHand : MonoBehaviour
 {
+    public FleshBoi AssignedPlayer;
     public Syringe HeldSyringe;
     public Text DebugTextObject;
     public Text DebugTriggerText;
 
     public Text DebugInTumorAlienText;
 
-
     public Hand hand;
+
+    #if UNITY_EDITOR
+    private void OnValidate()
+    {
+        AssignedPlayer = transform.root.GetComponent<FleshBoi>();    
+    }
+    #endif
 
     void Start()
     {
@@ -40,6 +47,7 @@ public class FleshBoiHand : MonoBehaviour
         if (ev.interactableObject.transform.tag == "Syringe")
         {
             HeldSyringe = ev.interactableObject.transform.GetComponent<Syringe>();
+            HeldSyringe.holdingPlayer = this.AssignedPlayer;
             
             if (DebugTextObject) DebugTextObject.text = HeldSyringe.gameObject.name;
         }

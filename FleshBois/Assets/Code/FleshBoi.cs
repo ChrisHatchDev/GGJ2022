@@ -17,17 +17,24 @@ public class FleshBoi : MonoBehaviour
         playerInput.actions.FindActionMap("XRI RightHand").Enable();
     }
 
-    public void OnPlunge(bool inTumor, bool inAlien)
+    public void OnPlunge(Tumor tumor, Alien alien)
     {
 
-        if (inTumor)
+        if (tumor != null)
         {
-
+            GameManager.Instance.score.addTumor(tumor.Size);
+            tumor.Heal();
         }
 
-        if (inAlien)
+        if (alien != null)
         {
-
+            GameManager.Instance.score.addDamage(30.0f);
+            alien.DecrementHealth();
         }
+    }
+
+    public void OnRightTrigger(InputValue val)
+    {
+        // GameManager.Instance.score.addTumor(0.5f);
     }
 }
