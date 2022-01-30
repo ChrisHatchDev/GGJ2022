@@ -26,6 +26,5 @@ public class AlienSpawner : MonoBehaviour
     public void DisposeOfAlien()
     {
         anim.SetTrigger("dumpsterOpen");
-        Instantiate(AlienPrefab, SpawnPointTrans.position, SpawnPointTrans.rotation);
     }
 }
