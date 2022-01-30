@@ -28,6 +28,8 @@ public class Tumor : MonoBehaviour
             Size = GetComponent<SphereCollider>().radius;
         }
 
+        if (tumorModels.Count <= 0) return;
+
         switch (type)
         {
             case TumorType.one:
