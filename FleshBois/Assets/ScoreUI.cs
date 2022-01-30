@@ -14,7 +14,7 @@ public class ScoreUI : MonoBehaviour
 
     void Update()
     {
-        //test();
+        test();
         ScoreText.text = GameManager.Instance.score.getCurrentScore().ToString();
     }
     void test(){
