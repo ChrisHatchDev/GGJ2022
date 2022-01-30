@@ -1583,6 +1583,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 754665404, guid: c42a54c6063e341dc951994c094c90de, type: 3}
+      propertyPath: joy
+      value: 
+      objectReference: {fileID: 8300000, guid: 020257708466d1844a83934b3a04011b, type: 3}
+    - target: {fileID: 754665404, guid: c42a54c6063e341dc951994c094c90de, type: 3}
+      propertyPath: pain
+      value: 
+      objectReference: {fileID: 8300000, guid: 62b600b7616393f4481407d249775e71, type: 3}
     - target: {fileID: 1070179401, guid: c42a54c6063e341dc951994c094c90de, type: 3}
       propertyPath: solver.target
       value: 
@@ -1801,6 +1809,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 117151090}
   alienSpawner: {fileID: 837488341}
   operatingTable: {fileID: 837488304}
+  nextSquish: 0
 --- !u!114 &942600496
 MonoBehaviour:
   m_ObjectHideFlags: 0
