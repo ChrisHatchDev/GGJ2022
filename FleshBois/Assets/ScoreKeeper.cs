@@ -4,28 +4,41 @@ using UnityEngine;
 using System.Data;
 using Mono.Data.Sqlite;
 using System.IO;
+using UnityEngine.Events;
+using System.Linq;
 
 public class ScoreKeeper : MonoBehaviour
 {
+    const string TableName = "highscores";
     public bool LocalDB;
     public float MaxTumorSize;
     public string ConnectionString;
     public string PlayerName;
-    const string TableName = "highscores";
+    public int currentScore;
+
     List<float> ListOfTumorSizes;
+    List<float> ListOfDamage;
+
     IDbConnection dbcon;
     string connection;
+
+    public UnityEvent UpdatedScore;
     
     void Start(){
         connection = "URI=file:" + Application.persistentDataPath + "/" + "GameData";
-        //Debug.Log(connection);
         dbcon = new SqliteConnection(connection);
         createHighscoresTable();
-        // PlayerName = "test";
-        // saveScore(69);
-        // saveScore(420);
-        // logDBValues();
+        //test();
+    }
+    void Update(){
+        
+    }
 
+    void test(){
+        PlayerName = "test";
+        saveScore(69);
+        saveScore(420);
+        logDBValues();
     }
 
     void createHighscoresTable(){
@@ -40,7 +53,6 @@ public class ScoreKeeper : MonoBehaviour
     void saveScore(int score){
         dbcon.Open();
 		IDbCommand cmnd = dbcon.CreateCommand();
-        //Debug.Log(string.Format("INSERT INTO {0} (playername, score) VALUES ('{1}', {2})", TableName, PlayerName, score));
 		cmnd.CommandText = string.Format("INSERT INTO {0} (playername, score) VALUES ('{1}', {2})", TableName, PlayerName, score);
 		cmnd.ExecuteNonQuery();
         dbcon.Close();
@@ -64,14 +76,17 @@ public class ScoreKeeper : MonoBehaviour
     }
 
     void addTumor(float size){
-        ListOfTumorSizes.Add(size);
+        ListOfTumorSizes.Add(MaxTumorSize/size);
+        UpdatedScore.Invoke();
     }
-    void startTimer(){
-        
+    void addDamage(float damage){
+        ListOfDamage.Add(damage);
+        UpdatedScore.Invoke();
     }
+    int getCurrentScore(){
+        return (int)(ListOfTumorSizes.Sum() - ListOfDamage.Sum());
+    }
+    public void clearScore(){
 
-    // Update is called once per frame
-    void Update(){
-        
     }
 }
