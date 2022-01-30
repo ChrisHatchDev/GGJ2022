@@ -23,6 +23,7 @@ public class Alien : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SlowUpdate());
+        GameManager.Instance.score.addAlienTreated(this);
     }
 
     IEnumerator SlowUpdate()

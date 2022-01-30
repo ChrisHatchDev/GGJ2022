@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         // Starts the timer automatically
-        timerIsRunning = true;
+        // timerIsRunning = true;
     }
 
     void Update()
@@ -33,6 +33,17 @@ public class Timer : MonoBehaviour
                 timerIsRunning = false;
             }
         }
+    }
+
+    public void StartTimer()
+    {
+        timerIsRunning = true;
+    }
+
+    public void EndTimer()
+    {
+        timerIsRunning = false;
+        timeRemaining = 120;
     }
 
     void addTime(int seconds){

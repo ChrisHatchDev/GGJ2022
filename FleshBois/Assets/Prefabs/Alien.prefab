@@ -231,7 +231,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.820755e-11, y: 0.0019927414, z: 3.856258e-10}
+  m_ConnectedAnchor: {x: -2.328302e-10, y: 0.001992741, z: 4.365575e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -313,7 +313,7 @@ MonoBehaviour:
   fixTransforms: 1
   solver:
     executedInEditor: 0
-    IKPosition: {x: -1.1982021, y: 3.5353813, z: -0.81413585}
+    IKPosition: {x: 0.83100724, y: 3.6073434, z: 1.01613}
     IKPositionWeight: 1
     root: {fileID: 7162367460472830540}
     target: {fileID: 0}
@@ -334,7 +334,7 @@ MonoBehaviour:
     transform: {fileID: 7162367460472830540}
     axis: {x: 0, y: 1, z: 0}
     poleAxis: {x: 0, y: 0, z: 0}
-    polePosition: {x: -0.69710916, y: 1.019555, z: 0.7413462}
+    polePosition: {x: 0.33852482, y: 1.089813, z: -0.5393453}
     poleWeight: 0
     poleTarget: {fileID: 0}
     clampWeight: 0.1
@@ -605,7 +605,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -5.820755e-11, y: 0.0019927428, z: 2.2555469e-10}
+  m_ConnectedAnchor: {x: 2.9103775e-10, y: 0.0019927425, z: 2.0372681e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -687,7 +687,7 @@ MonoBehaviour:
   fixTransforms: 1
   solver:
     executedInEditor: 0
-    IKPosition: {x: -0.6253371, y: 3.794955, z: 1.989319}
+    IKPosition: {x: 0.25726086, y: 3.8649478, z: -1.7873261}
     IKPositionWeight: 1
     root: {fileID: 96512238689482295}
     target: {fileID: 0}
@@ -708,7 +708,7 @@ MonoBehaviour:
     transform: {fileID: 96512238689482295}
     axis: {x: 0, y: 1, z: 0}
     poleAxis: {x: 0, y: 0, z: 0}
-    polePosition: {x: -0.6971091, y: 1.0195556, z: 0.8526542}
+    polePosition: {x: 0.338525, y: 1.0898132, z: -0.65065336}
     poleWeight: 0
     poleTarget: {fileID: 0}
     clampWeight: 0.1
@@ -930,7 +930,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0007833684, y: 0.00043692396, z: 0.0001848753}
+  m_ConnectedAnchor: {x: 0.00078336877, y: 0.00043692396, z: 0.0001848753}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2633823807116341203}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5013856973b27429d937d256dc082f2e, type: 3}
   m_Name: 
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   fixTransforms: 1
   solver:
     executedInEditor: 0
-    IKPosition: {x: 0.52325916, y: 3.7276897, z: 0.7698176}
+    IKPosition: {x: -0.9340751, y: 3.7276897, z: -0.59500283}
     IKPositionWeight: 1
     root: {fileID: 6365023723097257532}
     target: {fileID: 0}
@@ -1248,7 +1248,7 @@ MonoBehaviour:
     transform: {fileID: 6365023723097257532}
     axis: {x: 0, y: 0, z: 1}
     poleAxis: {x: 0, y: 1, z: 0}
-    polePosition: {x: -3.424265, y: 2.1730008, z: 0.7698159}
+    polePosition: {x: 3.0134487, y: 2.173001, z: -0.594998}
     poleWeight: 0
     poleTarget: {fileID: 0}
     clampWeight: 0.1
@@ -1260,14 +1260,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2633823807116341203}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45281828b4c9247558c7c695124d6877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   axis: {x: 0, y: 0, z: 1}
   defaultLocalRotation: {x: 0.15146859, y: 0.000000001424729, z: -0.000000045409976, w: 0.9884621}
-  limit: 35
+  limit: 50
   twistLimit: 180
 --- !u!1 &2700657985143850342
 GameObject:
@@ -1762,6 +1762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5690861422508573861}
   - component: {fileID: 754665404}
+  - component: {fileID: 1007206733}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Alien
@@ -1805,9 +1806,33 @@ MonoBehaviour:
   - {fileID: 2213840518557102542}
   - {fileID: 2213840517689339959}
   - {fileID: 2471201176605353896}
+  Health: 3
+  DebugHealedFlag: 0
   OnHealed:
     m_PersistentCalls:
       m_Calls: []
+  OnDied:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!95 &1007206733
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022024734618508831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a1b5e8fcc34b4503832b9455927bab6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5094219028722255566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2032,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0007833682, y: 0.00043692387, z: 0.00018487622}
+  m_ConnectedAnchor: {x: -0.00078336854, y: 0.00043692387, z: 0.00018487622}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2476,7 +2501,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.1641532e-10, y: 0.0019620552, z: -0.0000000019208528}
+  m_ConnectedAnchor: {x: 1.1641532e-10, y: 0.001962055, z: -0.0000000022118911}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3173,8 +3198,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.057203434
-  m_Center: {x: 0, y: 0.057203434, z: 0}
+  m_Radius: 0.0012
+  m_Center: {x: 0, y: 0.0005, z: 0}
 --- !u!144 &81374435
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3357,6 +3382,16 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 882711611853329543, guid: 77a63bc1030684b33983d97f683179d5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77a63bc1030684b33983d97f683179d5, type: 3}
+--- !u!1 &3099751917110661449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3099751917362658226, guid: 77a63bc1030684b33983d97f683179d5, type: 3}
+  m_PrefabInstance: {fileID: 285944571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2328175596255300595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2328175595970421000, guid: 77a63bc1030684b33983d97f683179d5, type: 3}
+  m_PrefabInstance: {fileID: 285944571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2213840518557102542 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7009531518045562059, guid: 77a63bc1030684b33983d97f683179d5, type: 3}
@@ -3368,16 +3403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3464ffdde489b44989a7945a3a29d1cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &3099751917110661449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3099751917362658226, guid: 77a63bc1030684b33983d97f683179d5, type: 3}
-  m_PrefabInstance: {fileID: 285944571}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2328175596255300595 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2328175595970421000, guid: 77a63bc1030684b33983d97f683179d5, type: 3}
-  m_PrefabInstance: {fileID: 285944571}
-  m_PrefabAsset: {fileID: 0}
 --- !u!135 &1121323594
 SphereCollider:
   m_ObjectHideFlags: 0

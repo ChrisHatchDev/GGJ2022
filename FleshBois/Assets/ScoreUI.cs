@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class ScoreUI : MonoBehaviour
 {
     public Text ScoreText;
+    public bool GameOverVersion;
+
     void Start()
     {
         
@@ -15,7 +17,12 @@ public class ScoreUI : MonoBehaviour
     void Update()
     {
         //test();
-        ScoreText.text = GameManager.Instance.score.getCurrentScore().ToString();
+        if (GameOverVersion)
+        {
+            ScoreText.text = "Score: " + GameManager.Instance.score.getCurrentScore().ToString();
+        } else {
+            ScoreText.text = GameManager.Instance.score.getCurrentScore().ToString();
+        }
     }
     void test(){
         int doThing = Random.Range(0, 100);
