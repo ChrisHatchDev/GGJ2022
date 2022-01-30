@@ -20,6 +20,8 @@ public class ScoreKeeper : MonoBehaviour
     List<float> ListOfTumorSizes = new List<float>();
     List<float> ListOfDamage = new List<float>();
 
+    List<Alien> AliensTreated = new List<Alien>();
+
     IDbConnection dbcon;
     string connection;
 
@@ -105,6 +107,33 @@ public class ScoreKeeper : MonoBehaviour
             return currentScore;
         }
     }
+
+    public void addAlienTreated(Alien alien)
+    {
+        // Will eventually check this list to see how many the player healed
+        AliensTreated.Add(alien);
+    }
+
+    public int getTotalAliens()
+    {
+        return AliensTreated.Count;
+    }
+
+    public int getTotalSaved(){
+        int numberSaved = AliensTreated.Count;
+
+        foreach (Alien alien in AliensTreated)
+        {
+            if (alien.Health > 0)
+            {
+               numberSaved++;
+               continue; 
+            }
+        }
+
+        return numberSaved;
+    }
+
     public void clearScore(){
         currentScore = 0;
         validScore = true;

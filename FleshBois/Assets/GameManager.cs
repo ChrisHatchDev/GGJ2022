@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour {
     public UnityEvent GameEndEvent = new UnityEvent();
     public Timer gameTimer;
     public ScoreKeeper score;
+    
+    public Animator gameOverScreen;
+    public AlienSpawner alienSpawner;
+    public OperatingTable operatingTable;
+
+    public float nextSquish = 0.0f;
 
     void Start()
     {
@@ -22,16 +28,41 @@ public class GameManager : MonoBehaviour {
     {
         
     }
-    void StartGame(){
+    public void StartGame(){
+        if (currentGameState == GameState.active) return;
+
+        alienSpawner.StartLaunchSequence();
+        gameTimer.StartTimer();
         currentGameState = GameState.active;
     }
+
+    public void StartGameDelayed(){
+        StartCoroutine(WaitToStart());
+    }
+
+    IEnumerator WaitToStart()
+    {
+        yield return new WaitForSeconds(2.0f);
+        StartGame();
+    }
+
     public void EndGame(){
         currentGameState = GameState.ended;
         GameEndEvent.Invoke();
+
+        operatingTable.Yeet();
+        alienSpawner.DisposeOfAlien();
+        gameOverScreen.SetTrigger("Open");
+        gameTimer.EndTimer();
     }
-    void restartGame(){
+    public void restartGame(){
         score.clearScore();
+        gameTimer.RestartTimer();
         currentGameState = GameState.idle;
+        gameOverScreen.SetTrigger("Close");
+        operatingTable.UnYeet();
+        alienSpawner.CloseDisposeAlien();
+        StartGameDelayed();
     }
     private void Awake()
     {
