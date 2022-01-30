@@ -100,7 +100,7 @@ public class ScoreKeeper : MonoBehaviour
             return currentScore;
         }
         else{
-            currentScore = (int)(ListOfTumorSizes.Sum() - ListOfDamage.Sum());
+            currentScore = ((int)((ListOfTumorSizes.Sum() - ListOfDamage.Sum()) * 0.1f));
             validScore = true;
             return currentScore;
         }

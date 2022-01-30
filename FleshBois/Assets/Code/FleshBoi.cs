@@ -28,7 +28,7 @@ public class FleshBoi : MonoBehaviour
 
         if (alien != null)
         {
-            GameManager.Instance.score.addDamage(2.0f);
+            GameManager.Instance.score.addDamage(30.0f);
             alien.DecrementHealth();
         }
     }
