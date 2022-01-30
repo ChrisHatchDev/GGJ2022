@@ -47,22 +47,28 @@ public class FleshBoiHand : MonoBehaviour
 
     public void OnSelectExit(SelectExitEventArgs ev)
     {
-        if (ev.interactableObject.transform.gameObject == HeldSyringe.gameObject)
-        {
-            HeldSyringe = null;
-            if (DebugTextObject) DebugTextObject.text = "";
+        if(HeldSyringe != null){
+            if (ev.interactableObject.transform.gameObject == HeldSyringe.gameObject)
+            {
+                HeldSyringe = null;
+                if (DebugTextObject) DebugTextObject.text = "";
+            }
         }
     }
 
     public void OnUIPress(InputValue val)
     {
-        bool _triggerPressed = val.Get<bool>();
+        try{
+            bool _triggerPressed = val.Get<bool>();
 
-        if (DebugTriggerText) DebugTriggerText.text = _triggerPressed.ToString();
+            if (DebugTriggerText) DebugTriggerText.text = _triggerPressed.ToString();
 
-        if (_triggerPressed)
-        {
+            if (_triggerPressed)
+            {
 
+            }
+        }catch{
+            
         }
     }
 
