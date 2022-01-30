@@ -17,11 +17,22 @@ public class FleshBoiHand : MonoBehaviour
     public Text DebugTextObject;
     public Text DebugTriggerText;
 
+    public Text DebugInTumorAlienText;
+
+
     public Hand hand;
 
     void Start()
     {
         
+    }
+
+    private void Update()
+    {
+        if (HeldSyringe && DebugInTumorAlienText)
+        {
+            DebugInTumorAlienText.text = "Tumor: " + HeldSyringe.InTumor + " Alien: " + HeldSyringe.InAlien;
+        }
     }
 
     public void OnSelectEnter(SelectEnterEventArgs ev)
