@@ -16,6 +16,13 @@ public class Syringe : MonoBehaviour
 
     public MeshRenderer TargetColorMesh;
     public List<Material> Materials;
+    public Animator anim;
+
+    public bool HasPlunged = false;
+    public bool InTumor = false;
+    public bool InAlien = false;
+
+    public FleshBoi holdingPlayer;
 
     #if UNITY_EDITOR
         private void OnValidate()
@@ -24,16 +31,6 @@ public class Syringe : MonoBehaviour
         }
     #endif
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Activate()
     {
 
@@ -41,11 +38,32 @@ public class Syringe : MonoBehaviour
 
     public void EnteredTumor()
     {
-
+        InTumor = true;
     }
 
     public void ExitedTumor()
     {
-        
+        InTumor = false;   
+    }
+
+    public void EnteredAlien()
+    {
+        InAlien = true;
+    }
+
+    public void ExitedAlien()
+    {
+        InAlien = false;   
+    }
+
+    public void Plunge()
+    {
+        if (HasPlunged == false)
+        {
+            anim.SetTrigger("plunge");
+            HasPlunged = true;
+
+            holdingPlayer.OnPlunge(InTumor, InAlien);
+        }
     }
 }

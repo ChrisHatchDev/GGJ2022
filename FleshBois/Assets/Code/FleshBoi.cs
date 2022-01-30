@@ -19,23 +19,17 @@ public class FleshBoi : MonoBehaviour
         playerInput.actions.FindActionMap("XRI RightHand").Enable();
     }
 
-    void Update()
+    public void OnPlunge(bool inTumor, bool inAlien)
     {
-        
-    }
 
-
-    public void OnSelectEnter(SelectEnterEventArgs ev)
-    {
-        if (ev.interactorObject.transform.tag == "Syringe")
+        if (inTumor)
         {
 
         }
-    }
 
-    public void OnSelectExit(SelectExitEventArgs ev)
-    {
+        if (inAlien)
+        {
 
-        
+        }
     }
 }

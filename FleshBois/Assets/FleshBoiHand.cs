@@ -19,8 +19,6 @@ public class FleshBoiHand : MonoBehaviour
 
     public Hand hand;
 
-    public bool PlungerIsActive;
-
     void Start()
     {
         
@@ -65,11 +63,9 @@ public class FleshBoiHand : MonoBehaviour
 
         if (DebugTriggerText) DebugTriggerText.text = _triggerPressed.ToString();
 
-        if (_triggerPressed > 0.5f)
+        if (_triggerPressed > 0.5f && HeldSyringe)
         {
-            PlungerIsActive = true;
-        } else {
-            PlungerIsActive = false;
+            HeldSyringe.Plunge();
         }
     }
 
@@ -81,11 +77,9 @@ public class FleshBoiHand : MonoBehaviour
 
         if (DebugTriggerText) DebugTriggerText.text = _triggerPressed.ToString();
 
-        if (_triggerPressed > 0.5f)
+        if (_triggerPressed > 0.5f && HeldSyringe)
         {
-            PlungerIsActive = true;
-        } else {
-            PlungerIsActive = false;
+            HeldSyringe.Plunge();
         }
     }
 }
