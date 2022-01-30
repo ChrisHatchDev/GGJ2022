@@ -11,13 +11,14 @@ public class ScoreKeeper : MonoBehaviour
 {
     const string TableName = "highscores";
     public bool LocalDB;
-    public float MaxTumorSize;
+    public float MaxTumorSize = 10.0f;
     public string ConnectionString;
     public string PlayerName;
-    public int currentScore;
+    int currentScore = 0;
+    bool validScore = true;
 
-    List<float> ListOfTumorSizes;
-    List<float> ListOfDamage;
+    List<float> ListOfTumorSizes = new List<float>();
+    List<float> ListOfDamage = new List<float>();
 
     IDbConnection dbcon;
     string connection;
@@ -75,18 +76,30 @@ public class ScoreKeeper : MonoBehaviour
         dbcon.Close();
     }
 
-    void addTumor(float size){
+    public void addTumor(float size){
+        validScore = false;
         ListOfTumorSizes.Add(MaxTumorSize/size);
         UpdatedScore.Invoke();
     }
-    void addDamage(float damage){
+    public void addDamage(float damage){
+        validScore = false;
         ListOfDamage.Add(damage);
         UpdatedScore.Invoke();
     }
-    int getCurrentScore(){
-        return (int)(ListOfTumorSizes.Sum() - ListOfDamage.Sum());
+
+    public int getCurrentScore(){
+        if(validScore){
+            return currentScore;
+        }
+        else{
+            currentScore = (int)(ListOfTumorSizes.Sum() - ListOfDamage.Sum());
+            return currentScore;
+        }
     }
     public void clearScore(){
-
+        currentScore = 0;
+        validScore = true;
+        ListOfDamage.Clear();
+        ListOfTumorSizes.Clear();
     }
 }
