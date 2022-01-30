@@ -8,9 +8,15 @@ public class AlienSpawner : MonoBehaviour
     public Transform SpawnPointTrans;
 
     public Animator anim;
+    public AudioSource source;
 
     void Start()
     {
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        source.PlayOneShot(clip);
     }
 
     public void StartLaunchSequence()
