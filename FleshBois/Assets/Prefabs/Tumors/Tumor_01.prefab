@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2089220086670784372}
   - component: {fileID: 4258876721942463422}
   - component: {fileID: -2267467811329134567}
+  - component: {fileID: 2471201177739756792}
   m_Layer: 0
   m_Name: Tumor_01
   m_TagString: Tumor
@@ -95,3 +96,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.07716579
   m_Center: {x: 0.00006325543, y: 0.002763372, z: 0.028068077}
+--- !u!114 &2471201177739756792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2313281894166307435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3464ffdde489b44989a7945a3a29d1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

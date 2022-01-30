@@ -22,7 +22,7 @@ public class Syringe : MonoBehaviour
     public bool InTumor = false;
     public bool InAlien = false;
 
-    public FleshBoi holdingPlayer;
+    private FleshBoi holdingPlayer;
 
     #if UNITY_EDITOR
         private void OnValidate()

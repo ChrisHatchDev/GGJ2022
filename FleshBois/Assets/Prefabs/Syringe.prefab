@@ -301,7 +301,6 @@ MonoBehaviour:
   HasPlunged: 0
   InTumor: 0
   InAlien: 0
-  holdingPlayer: {fileID: 0}
 --- !u!65 &168728829
 BoxCollider:
   m_ObjectHideFlags: 0
