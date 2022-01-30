@@ -46,6 +46,12 @@ public class Timer : MonoBehaviour
         timeRemaining = 120;
     }
 
+    public void RestartTimer()
+    {
+        timerIsRunning = true;
+        timeRemaining = 120;
+    }
+
     void addTime(int seconds){
         timeRemaining += (float) seconds;
     }

@@ -53,10 +53,12 @@ public class GameManager : MonoBehaviour {
         gameOverScreen.SetTrigger("Open");
         gameTimer.EndTimer();
     }
-    void restartGame(){
+    public void restartGame(){
         score.clearScore();
+        gameTimer.RestartTimer();
         currentGameState = GameState.idle;
         gameOverScreen.SetTrigger("Close");
+        StartGameDelayed();
     }
     private void Awake()
     {
