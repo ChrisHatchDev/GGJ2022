@@ -23,9 +23,13 @@ public class ScoreKeeper : MonoBehaviour
     IDbConnection dbcon;
     string connection;
 
-    public UnityEvent UpdatedScore;
+    public UnityEvent UpdatedScore = new UnityEvent();
     
     void Start(){
+
+        ListOfDamage.Add(0f);
+        ListOfTumorSizes.Add(0f);
+
         connection = "URI=file:" + Application.persistentDataPath + "/" + "GameData";
         dbcon = new SqliteConnection(connection);
         createHighscoresTable();
@@ -77,11 +81,15 @@ public class ScoreKeeper : MonoBehaviour
     }
 
     public void addTumor(float size){
+        Debug.Log("TUMOR ADDED");
+
         validScore = false;
         ListOfTumorSizes.Add(MaxTumorSize/size);
         UpdatedScore.Invoke();
     }
     public void addDamage(float damage){
+        Debug.Log("DAMAGE ADDED");
+
         validScore = false;
         ListOfDamage.Add(damage);
         UpdatedScore.Invoke();
@@ -93,6 +101,7 @@ public class ScoreKeeper : MonoBehaviour
         }
         else{
             currentScore = (int)(ListOfTumorSizes.Sum() - ListOfDamage.Sum());
+            validScore = true;
             return currentScore;
         }
     }

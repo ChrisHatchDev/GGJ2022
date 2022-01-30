@@ -7,10 +7,25 @@ public class Tumor : MonoBehaviour
     public float Size;
     public bool Healed;
 
+    public Animator anim;
+
     #if UNITY_EDITOR
     private void OnValidate()
     {
-        Size = GetComponent<SphereCollider>().radius;
+        if(GetComponent<SphereCollider>() != null)
+        {
+            Size = GetComponent<SphereCollider>().radius;
+        }
     }
     #endif
+
+    public void Heal()
+    {
+        Healed = true;
+
+        if (anim)
+        {
+            anim.SetTrigger("healed");
+        }
+    }
 }

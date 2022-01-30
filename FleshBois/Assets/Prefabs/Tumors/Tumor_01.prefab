@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4258876721942463422}
   - component: {fileID: -2267467811329134567}
   - component: {fileID: 2471201177739756792}
+  - component: {fileID: 8811276796681547691}
   m_Layer: 0
   m_Name: Tumor_01
   m_TagString: Tumor
@@ -91,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2313281894166307435}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.07716579
@@ -108,3 +109,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3464ffdde489b44989a7945a3a29d1cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Size: 0.07716579
+  Healed: 0
+  anim: {fileID: 8811276796681547691}
+--- !u!95 &8811276796681547691
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2313281894166307435}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f930d4c284574a129b99d7848ac3b9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

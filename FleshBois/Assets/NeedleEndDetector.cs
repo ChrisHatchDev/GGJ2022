@@ -6,21 +6,21 @@ public class NeedleEndDetector : MonoBehaviour
 {
     public Syringe syringe;
 
-    public GameObject tumor;
-    public GameObject alien;
+    public Tumor tumor;
+    public Alien alien;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Tumor" && other != tumor)
+        if (other.tag == "Tumor" && tumor == null && other != tumor)
         {
-            tumor = other.gameObject;
-            syringe.EnteredTumor();
+            tumor = other.GetComponent<Tumor>();
+            syringe.EnteredTumor(tumor);
         }
 
-        if (other.tag == "Alien" && other != alien)
+        if (other.tag == "Alien" && alien == null && other != alien)
         {
-            alien = other.gameObject;
-            syringe.EnteredAlien();
+            alien = other.transform.root.GetComponent<Alien>();
+            syringe.EnteredAlien(alien);
         }
     }
 

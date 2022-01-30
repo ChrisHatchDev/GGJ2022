@@ -22,7 +22,10 @@ public class Syringe : MonoBehaviour
     public bool InTumor = false;
     public bool InAlien = false;
 
-    private FleshBoi holdingPlayer;
+    public Tumor tumor;
+    public Alien alien;
+
+    public FleshBoi holdingPlayer;
 
     #if UNITY_EDITOR
         private void OnValidate()
@@ -36,24 +39,28 @@ public class Syringe : MonoBehaviour
 
     }
 
-    public void EnteredTumor()
+    public void EnteredTumor(Tumor tumor)
     {
         InTumor = true;
+        this.tumor = tumor;
     }
 
     public void ExitedTumor()
     {
-        InTumor = false;   
+        InTumor = false;
+        this.tumor = null;
     }
 
-    public void EnteredAlien()
+    public void EnteredAlien(Alien alien)
     {
         InAlien = true;
+        this.alien = alien;
     }
 
     public void ExitedAlien()
     {
         InAlien = false;   
+        this.alien = null;
     }
 
     public void Plunge()
@@ -63,7 +70,7 @@ public class Syringe : MonoBehaviour
             anim.SetTrigger("plunge");
             HasPlunged = true;
 
-            holdingPlayer.OnPlunge(InTumor, InAlien);
+            holdingPlayer.OnPlunge(this.tumor, this.alien);
         }
     }
 }

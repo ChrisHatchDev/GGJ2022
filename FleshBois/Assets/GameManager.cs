@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance { get { return _instance; } }
     public enum GameState {idle, active, ended};
     public GameState currentGameState = GameState.idle;
-    public UnityEvent GameEndEvent;
+    public UnityEvent GameEndEvent = new UnityEvent();
     public Timer gameTimer;
     public ScoreKeeper score;
 
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
     void StartGame(){
         currentGameState = GameState.active;
     }
-    void EndGame(){
+    public void EndGame(){
         currentGameState = GameState.ended;
         GameEndEvent.Invoke();
     }
