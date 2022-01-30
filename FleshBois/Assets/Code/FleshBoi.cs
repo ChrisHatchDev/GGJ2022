@@ -9,6 +9,7 @@ public class FleshBoi : MonoBehaviour
     public ScoreKeeper scoreKeeper;
 
     public PlayerInput playerInput;
+    
 
     void Awake()
     {

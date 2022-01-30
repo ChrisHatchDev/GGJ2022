@@ -1814,6 +1814,9 @@ MonoBehaviour:
   OnDied:
     m_PersistentCalls:
       m_Calls: []
+  _source: {fileID: 7361843391377487010}
+  pain: {fileID: 0}
+  joy: {fileID: 8300000, guid: 3a3cf442ec9263a48abe2e0de78ac913, type: 3}
 --- !u!95 &1007206733
 Animator:
   serializedVersion: 3
@@ -2872,7 +2875,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7361843391377487010}
   squish: {fileID: 8300000, guid: ba3d217bb9e97234482ce742872c3a10, type: 3}
-  nextSound: 0
 --- !u!82 &7361843391377487010
 AudioSource:
   m_ObjectHideFlags: 0
