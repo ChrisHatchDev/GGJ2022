@@ -13,9 +13,13 @@ public class AlienSpawner : MonoBehaviour
     {
     }
 
-    public void LaunchNewAlien()
+    public void StartLaunchSequence()
     {
         anim.SetTrigger("spawn");
+    }
+
+    public void LaunchNewAlien()
+    {
         Instantiate(AlienPrefab, SpawnPointTrans.position, SpawnPointTrans.rotation);
     }
 

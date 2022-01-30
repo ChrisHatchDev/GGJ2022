@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
     public void StartGame(){
         if (currentGameState == GameState.active) return;
 
-        alienSpawner.LaunchNewAlien();
+        alienSpawner.StartLaunchSequence();
         gameTimer.StartTimer();
         currentGameState = GameState.active;
     }
@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour {
 
         operatingTable.Yeet();
         alienSpawner.DisposeOfAlien();
-        gameTimer.EndTimer();
         gameOverScreen.SetTrigger("Open");
+        gameTimer.EndTimer();
     }
     void restartGame(){
         score.clearScore();
