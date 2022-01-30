@@ -23,12 +23,14 @@ public class FleshBoi : MonoBehaviour
 
         if (tumor != null)
         {
+            alien.JoySound();
             tumor.Heal();
             GameManager.Instance.score.addTumor(tumor.Size);
         }
 
         if (alien != null)
         {
+            alien.PainSound();
             GameManager.Instance.score.addDamage(30.0f);
             alien.DecrementHealth();
         }
